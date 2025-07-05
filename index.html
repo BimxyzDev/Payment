@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>PAYMENT BIMXYZ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://img1.pixhost.to/images/6991/618780260_kenjaa.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    img.qris {
+      width: 250px;
+      max-width: 100%;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      margin: 20px 0;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      background-color: #000;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    textarea.hidden-input {
+      position: absolute;
+      left: -9999px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💳 PAYMENT BIMXYZ</h1>
+    <img src="https://img1.pixhost.to/images/6991/618780856_kenjaa.jpg" alt="QRIS" class="qris">
+
+    <div>
+      <button onclick="copyNumber('089654288987')">DANA</button>
+      <button onclick="copyNumber('089654288987')">GOPAY</button>
+      <button onclick="copyNumber('gaada')">OVO</button>
+    </div>
+
+    <textarea id="copyBox" class="hidden-input" readonly></textarea>
+    <div class="note">Klik tombol untuk menyalin nomor pembayaran</div>
+  </div>
+
+  <script>
+    function copyNumber(nomor) {
+      const input = document.getElementById("copyBox");
+      input.value = nomor;
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("✅ Nomor berhasil disalin: " + nomor);
+    }
+  </script>
+</body>
+</html>
